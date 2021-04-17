@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 #This is a view called index
 def controls(request):
-    return HttpResponse("This is the controls page.")
+    return render(request, 'controls/controls.html')
 
 def test(request):
     return HttpResponse("Test was sucessful")
