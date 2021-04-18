@@ -9,7 +9,7 @@ def test(request):
     return HttpResponse("Test was sucessful")
 
 def areYouReady(request):
-    return HttpResponse('Are you Ready to Drive?')
+    return render(request, 'controls/areyouready.html')
 
 def driving(request):
     return HttpResponse('Driving')

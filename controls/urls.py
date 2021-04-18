@@ -7,6 +7,6 @@ app_name = 'controls'
 urlpatterns = [
     path('', views.controls, name='Controls'),
     path('test/', views.test, name = 'test'),
-    path('areyouready/', views.areYouReady, name = 'Ready to Go?'),
-    path('ready', views.driving, name = 'Driving')
+    path('areyouready/', views.areYouReady, name = 'Are You Ready?'),
+    path('ready/', views.driving, name = 'Driving')
 ]
