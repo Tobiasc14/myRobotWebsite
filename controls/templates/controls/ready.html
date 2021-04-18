@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ready to Drive</title>
     <style>
-        h1 {text-align: center; color: black; background-color: white}
+        h1 {text-align: center; color: black; background-color: white;}
         p {text-align: center; color: black; font-size: 20px;}
-        div {margin: auto; word-wrap: normal; width: 500px}
-        .center {text-align: center}
+        div {margin: auto; word-wrap: normal; width: 500px;}
+        .center {text-align: center;}
+        .button {text-align: center; width: 100px;}
 
     </style>
 </head>
-<body>
-
+<body bgcolor="cyan">
+    <h1><b>
+        <br>
+        <>The worst Rasberry Pi controller<><br></b>
+        <br>
+    </h1>
+    <br>
+    <div class="button">
+{% for option in button %}
+        <button type="button">{{ option.name }} </button>
+{% endfor %}
+</div>
 </body>
 </html>
