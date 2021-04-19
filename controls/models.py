@@ -9,6 +9,13 @@ class Button(models.Model):
     def __str__(self):
         return self.name
 
+    def push(self):
+        if self.isPushed:
+            self.isPushed = False
+        else:
+            self.isPushed = True
+
+
 
 
 
