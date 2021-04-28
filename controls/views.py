@@ -24,6 +24,14 @@ def driving(request):
     #print(request.POST)
 
     buttonPushed = get_object_or_404(Button, id=int(request.POST['button']))
+    for button in Button.objects.all():
+        if button == buttonPushed:
+            pass
+        elif button.isPushed:
+            button.push()
+            button.save()
+        else:
+            pass
     buttonPushed.push()
     buttonPushed.save()
 
