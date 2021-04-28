@@ -33,13 +33,15 @@
             output pins. This essentially turns the website into wireless remote control for the pi.
     </p>
     </div>
-
+<form action="{% url 'controls:driving' %}" method="POST">
+    {% csrf_token %}
 <div class="button">
-{% for option in button %}
-    <button type="button" onmousdown="{{ option.push }}" >{{ option.name }} </button>
+{% for option in buttonList %}
+    <button type="submit" id="button{{ option.name }}" name="button{{ option.name }}" value="{{ option.name }}" >{{ option.name }}</button>
 {% endfor %}
 
 </div>
+</form>
     <br>
         <table>
             <tr>
@@ -47,8 +49,6 @@
                 Current Command:
             </th>
         </tr>
-
-
                 {% for option in button %}
                     {% if option.isPushed %}
                         <tr><td>{{ option.name }} </td></tr>

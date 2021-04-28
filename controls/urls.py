@@ -6,7 +6,8 @@ from . import views
 # with controls. What to do with a given URL is defined in the views page
 app_name = 'controls'
 urlpatterns = [
-    path('', views.controls, name='Controls'),
+    path('', views.controls, name='controls'),
     path('test/', views.test, name = 'test'),
-    path('ready/', views.driving, name = 'Driving')
+    path('ready/', views.ready, name = 'ready'),
+    path('driving/', views.driving, name = 'driving'),
 ]
