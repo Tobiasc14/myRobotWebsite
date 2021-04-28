@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render, get_list_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
+from django.views import generic
 
 from controls.models import Button
 
@@ -21,6 +22,9 @@ def ready(request):
 
 def driving(request):
     #print(request.POST)
-    buttonPushed = get_object_or_404(Button, name=request.POST)
+
+    buttonPushed = get_object_or_404(Button, id=int(request.POST['button']))
     buttonPushed.push()
+    buttonPushed.save()
+
     return HttpResponseRedirect(reverse('controls:ready'))
