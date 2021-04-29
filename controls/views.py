@@ -17,7 +17,7 @@ def test(request):
     return HttpResponse("Test was sucessful")
 '''
 def ready(request):
-    button = get_list_or_404(Button.objects.all())
+    button = get_list_or_404(Button.objects.order_by('id'))
     return render(request, 'controls/ready.html', {'buttonList': button})
 
 def driving(request):
