@@ -12,10 +12,10 @@ from controls.models import Button
 
 def controls(request):
     return render(request, 'controls/controls.html')
-
+'''
 def test(request):
     return HttpResponse("Test was sucessful")
-
+'''
 def ready(request):
     button = get_list_or_404(Button.objects.all())
     return render(request, 'controls/ready.html', {'buttonList': button})

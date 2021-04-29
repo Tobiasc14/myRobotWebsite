@@ -7,7 +7,7 @@ from . import views
 app_name = 'controls'
 urlpatterns = [
     path('', views.controls, name='controls'),
-    path('test/', views.test, name = 'test'),
+    # path('test/', views.test, name = 'test'),
     path('ready/', views.ready, name = 'ready'),
     path('driving/', views.driving, name = 'driving'),
 ]
