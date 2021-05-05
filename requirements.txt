@@ -1,3 +1,6 @@
 django
 django-heroku
 gunicorn
+requests
+bs4
+RPi.GPIO
