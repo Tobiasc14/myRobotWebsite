@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 #
 
+# I am using this code gotten from https://github.com/ChallengerTECH/Lib_nrf24_pi.git 
+# Full credit for making this library work goes to Ali Challenger, Could not have done 
+# This project without his youtube video explaining how to use the chip and his version
+# of this library
+
 
 # This file lib_nrf24.py is a slightly tweaked version of Barraca's "pynrf24".
 
