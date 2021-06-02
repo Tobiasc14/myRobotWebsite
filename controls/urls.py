@@ -9,5 +9,6 @@ urlpatterns = [
     path('', views.controls, name='controls'),
     # path('test/', views.test, name = 'test'),
     path('ready/', views.ready, name = 'ready'),
+    path('secret/', views.secret, name = 'secret'),
     path('driving/', views.driving, name = 'driving'),
 ]

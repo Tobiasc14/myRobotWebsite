@@ -16,6 +16,9 @@ def controls(request):
 def test(request):
     return HttpResponse("Test was sucessful")
 '''
+def secret(request):
+    return render(request, 'controls/secret.html')
+
 def ready(request):
     button = get_list_or_404(Button.objects.order_by('id'))
     return render(request, 'controls/ready.html', {'buttonList': button})
