@@ -7,9 +7,9 @@
         h1 {text-align: center; color: black; background-color: white;}
         h2 {text-align: center; color: black;}
         p {text-align: center; color: black; width: 500px; font-size: 20px;background-color: white;}
-        div {text-align: center;width: 500px; margin: auto; word-wrap: normal; }
-        .center {text-align: center;}
-        .button {text-align: center; width: 75;}
+        div {text-align: center; margin: auto; word-wrap: normal; background-color: white;}
+        .center {text-align: center;width: 500px;}
+        .button {text-align: center; width: 75; background-color: green}
         .command {text-align: center; margin-left: auto; margin-right: auto;}
         table, th, td {text-align: center; border: 2px solid black; margin-left: auto; margin-right: auto;}
 
@@ -26,13 +26,16 @@
         How it works:
     </h2>
     <div>
-        <p>
+        <div class = center>
+            <p>
             When you press one of the buttons, an internal database changes a value associated with the button from
             false to true. This triggers the appearance of the command in the "current instruction" table below.
             The code I wrote for the pi (and you need to write to get this to work) looks in this table and checks
             for recognized commands. If a recognized command is seen, the pi responds by activating the corresponding
             output pins. This essentially turns the website into a wireless remote control for the pi.
-    </p>
+             </p>
+        </div>
+
     </div>
 <form action="{% url 'controls:driving' %}" method="post">
     {% csrf_token %}
