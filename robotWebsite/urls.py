@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     # tells website where to look give a url. Given controls, look in controls.urls
     path('admin/', admin.site.urls),
-    path('', include('controls.urls'))
+    path('', include('controls.urls')),
+    path('', include('ProjectNavigator.urls')),
 ]

@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 # with controls. What to do with a given URL is defined in the views page
 app_name = 'controls'
 urlpatterns = [
-    path('', views.controls, name='controls'),
+    path('controls/', views.controls, name='controls'),
     # path('test/', views.test, name = 'test'),
     path('ready/', views.ready, name = 'ready'),
     path('secret/', views.secret, name = 'secret'),
