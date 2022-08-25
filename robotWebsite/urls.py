@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # tells website where to look give a url. Given controls, look in controls.urls
+    # tells website where to look given a url. Given controls, look in controls.urls
     path('admin/', admin.site.urls),
-    path('', include('controls.urls')),
+    path('controls/', include('controls.urls')),
     path('', include('ProjectNavigator.urls')),
+
 ]
