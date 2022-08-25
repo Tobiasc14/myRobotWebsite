@@ -8,10 +8,11 @@
     <style>
         h1 {text-align: center; color: black; background-color: white;}
         h2 {text-align: center; color: black;}
-        p {text-align: center; color: black; width: 500px; font-size: 20px;background-color: white;}
+        p {text-align: center; color: black; width: 500px; font-size: 18px;}
         div {text-align: center; margin: auto; word-wrap: normal;}
-        .center {text-align: center;width: 500px;}
-        .left {text-align: left;width: 500px;}
+        .center {text-align: center;width: 500px;height: 400px;font-size: 16px;}
+        .grid {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap: 20px;}
+        .left {text-align: left;width: 500px;height: 400px;font-size: 16px;}
         .button {text-align: center; width: 75; background-color: green}
         .command {text-align: center; margin-left: auto; margin-right: auto;}
         .green {background-color: green}
@@ -21,20 +22,46 @@
     </style>
 </head>
 <body class="green">
-    <div class="left">
+ <br>
         <br>
         <br>
         <br>
-        <br>
-        <button type="button"><a href="{% url 'controls:controls' %}">Cheesit Bot Controller</a></button>
+    <div class="grid">
+        <div>
 
-        <br>
-        <nav>
+        </div>
+
+        <div class="center">
+            <br>
+
+            <button type="button" align="center"><a href="{% url 'controls:controls' %}" >Cheesit Bot Controller</a></button>
+            <br>
+            <br>
+            <p>This is my first real Django project. I was first exposed to the Django framework as a required coding project for a class I was taking for fun,
+            but I wanted to use it to do something more than the basic website we were asked to build. As out final "exam" for that class, we were
+            told to just do something cool (awesome choice on behalf of the professor, shoutout to ProfJ), and I thought about combining the power of a website
+            that can be accessed anywhere at any time by anyone, with a robotics project, and so the basic premise of the cheesit car was born. This project
+            is just a website that generates a table, and updates the values in that table when the user clicks a button. Separately from the website, I also
+            coded up a webscraper which could run on a rasberry pi and will look in that table for a change in values. Then, based on the values in the table,
+            it will send commands to an arduino, which at the time, I had wired up to some basic motors and put into a cheesit box. Together, I had made a remote
+            controlled vehicle that anyone could drive around my apartment from anywhere, dubbed the Cheesit Car. Got a solid A on that project.
+            </p>
+        </div>
+        <div class="left">
+
+              <img src="{% static 'ProjectNavigator/cheesitbot.png' %}" width=100% height=500px align="top" >
+        </div>
+
+
+       <div>
+
+       </div>
+
             <!-- To get this to work, needed to be able to open the image in pycharm, required opening and saving the image
             in mspaint as png -->
 
-            <img src="{% static 'ProjectNavigator/cheesitbot.png' %}" width=100% height=800px>
-        </nav>
+
+
 
         <br>
 
