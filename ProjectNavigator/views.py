@@ -10,5 +10,4 @@ from controls.models import Button
 def projectNavigator(request):
     return render(request, 'ProjectNavigator/homepage.html')
 
-#def controls(request):
- #   return render(request, 'controls/controls/controls.html')
+
