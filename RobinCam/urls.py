@@ -4,9 +4,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-app_name = 'ProjectNavigator'
+app_name = 'RobinCam'
 urlpatterns = [
-    path('', views.projectNavigator, name='projectNavigator'),
+    path('robincam/', views.robinCam, name='robinCam'),
+
     # path('test/', views.test, name = 'test'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

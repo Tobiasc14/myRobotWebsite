@@ -23,6 +23,7 @@ urlpatterns = [
     # tells website where to look given a url. Given controls, look in controls.urls
     path('admin/', admin.site.urls),
     path('controls/', include('controls.urls')),
+    path('robincam/', include('RobinCam.urls')),
     path('', include('ProjectNavigator.urls')),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
