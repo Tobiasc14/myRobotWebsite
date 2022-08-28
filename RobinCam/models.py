@@ -4,6 +4,6 @@ from django.db import models
 
 class Picture(models.Model):
 
-    image = models.ImageField(upload_to='RobinCam/images/')
+    image = models.ImageField(upload_to='staticfiles/images')
 
 
