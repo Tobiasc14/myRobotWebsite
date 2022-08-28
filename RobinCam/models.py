@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Picture(models.Model):
-
-    image = models.ImageField(upload_to='staticfiles/images')
+    name = models.CharField(max_length = 30, default="Robin")
+    image = models.ImageField(upload_to='RobinCam/images')
 
 
