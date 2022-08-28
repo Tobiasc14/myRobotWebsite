@@ -4,6 +4,6 @@ from django.db import models
 
 class Picture(models.Model):
     title = models.CharField(max_length = 30, default="Robin")
-    picture = models.ImageField(upload_to='RobinCam/images')
+    picture = models.ImageField(upload_to='media/RobinCam/images')
 
 

@@ -15,6 +15,7 @@ def robinCam(request):
             img_obj = form.instance
             loc = img_obj.picture.url
             title = img_obj.title
+
             return render(request, 'RobinCam/whatthedogdoin.html', {'form': form, 'img_obj': loc, 'title': title})
     else:
         form = ImageForm()
