@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-h5g^a+hrn_pa^eioajx1hdsb@!u@%p#vji(2s1qijw9kxguq(2
 DEBUG = True
 
 #why
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.0.17", 'hey']
 
 
 # Application definition
@@ -132,9 +132,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
- # MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # Default primary key field type
