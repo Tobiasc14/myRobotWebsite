@@ -23,6 +23,6 @@ submit_button = browser.find_element(by='xpath', value="//button[@type='submit']
 submit_button.click()
 
 # Wait for the page to load
-time.sleep(3)
+time.sleep(5)
 # Close the browser
 browser.quit()
