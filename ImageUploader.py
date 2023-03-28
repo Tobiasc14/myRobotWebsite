@@ -2,15 +2,18 @@ from selenium import webdriver
 import time
 
 # Set up the webdriver
-browser = webdriver.Chrome()
+options = webdriver.ChromeOptions()
+options.binary_location = '/usr/bin/chromium-browser'
+browser = webdriver.Chrome(executable_path = '/usr/bin/chromium-browser', options = options)
 
 # Go to the website URL
-url = "http://127.0.0.1:8000/robincam/"
+url = "https://24.218.29.129/robincam/"
 browser.get(url)
 
 # Find the file input element and send the image file path to it
 file_input = browser.find_element(by='name', value='picture')
-file_path = "C:/Users/hjctj/PycharmProjects/myRobotWebsite/PlanetSkyline.png"
+file_path = "/home/pi/Pictures/Screenshot.png"
+time.sleep(5)
 file_input.send_keys(file_path)
 
 # Submit the form
