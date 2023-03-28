@@ -5,7 +5,7 @@ import time
 browser = webdriver.Chrome()
 
 # Go to the website URL
-url = "http://127.0.0.1:8000/robincam/"
+url = "http://24.218.29.129/robincam/"
 browser.get(url)
 
 # Find the file input element and send the image file path to it
