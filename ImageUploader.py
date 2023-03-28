@@ -4,7 +4,7 @@ import time
 # Set up the webdriver
 options = webdriver.ChromeOptions()
 options.binary_location = '/usr/bin/chromium-browser'
-browser = webdriver.Chrome(executable_path = '/usr/bin/chromium-browser', options = options)
+browser = webdriver.Chrome(executable_path='/usr/lib/chromium-browser/chromedriver', options=options)
 
 # Go to the website URL
 url = "https://24.218.29.129/robincam/"
@@ -22,6 +22,5 @@ submit_button.click()
 
 # Wait for the page to load
 time.sleep(5)
-
 # Close the browser
 browser.quit()
