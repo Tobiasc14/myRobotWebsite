@@ -1,10 +1,12 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 import time
 
 # Set up the webdriver
 options = webdriver.ChromeOptions()
 options.binary_location = '/usr/bin/chromium-browser'
-browser = webdriver.Chrome(executable_path='/usr/lib/chromium-browser/chromedriver', options=options)
+service = Service('/usr/lib/chromium-browser/chromedriver')
+browser = webdriver.Chrome(service = service, options=options)
 
 # Go to the website URL
 url = "http://24.218.29.129/robincam/"
