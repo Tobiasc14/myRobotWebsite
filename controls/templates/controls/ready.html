@@ -41,7 +41,7 @@
     {% csrf_token %}
 <div class="button">
 {% for option in buttonList %}
-    <button type="submit" id="button{{ option.name }}" name="button" value="{{ option.id }}" >{{ option.name }}</button>
+    <button type="submit" class = "button" id="button{{ option.name }}" name="button" value="{{ option.id }}" >{{ option.name }}</button>
 {% endfor %}
 
 </div>
